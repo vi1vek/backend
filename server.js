@@ -11,7 +11,10 @@ app.use(cors())
 app.use(express.json())
 app.use("/api/users",userRoute)
 
-
+app.get("/",()=>{
+    console.log("From backend");
+    
+})
 const PORT = process.env.PORT || 4000
 app.listen(PORT,()=>{
     connectDb()
